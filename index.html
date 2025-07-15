@@ -7,10 +7,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Mobile Navbar -->
 <nav class="navbar d-md-none px-3 bg-white mobile-navbar-fixed">
   <div class="container-fluid">
     <div class="d-flex justify-content-between w-100">
@@ -26,91 +30,64 @@
   </div>
 </nav>
 
-<!-- Offcanvas Menu -->
 <div class="offcanvas offcanvas-start" id="offcanvasMenu">
   <div class="offcanvas-header border-bottom">
     <h5 class="offcanvas-title fw-semibold">Menu</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body px-3">
-
-    <!-- Menu Section -->
     <div class="mb-4">
       <h6 class="text-muted fw-semibold mb-3">Menu</h6>
       <ul class="list-unstyled mb-0">
         <li class="py-2 border-bottom d-flex align-items-center">
-          <i class="fas fa-shopping-cart me-3 text-dark"></i>
-          <span>My cart</span>
+          <i class="fas fa-shopping-cart me-3 text-dark"></i><span>My cart</span>
         </li>
         <li class="py-2 border-bottom d-flex align-items-center">
-          <i class="fas fa-book-open me-3 text-dark"></i>
-          <span>Menu</span>
+          <i class="fas fa-book-open me-3 text-dark"></i><span>Menu</span>
         </li>
         <li class="py-2 border-bottom d-flex align-items-center">
-          <i class="fas fa-box me-3 text-dark"></i>
-          <span>My orders</span>
+          <i class="fas fa-box me-3 text-dark"></i><span>My orders</span>
         </li>
       </ul>
     </div>
-
-    <!-- Sign in Section -->
     <div>
       <h6 class="text-muted fw-semibold mb-3">Sign in with</h6>
       <ul class="list-unstyled mb-0">
         <li class="py-2 border-bottom d-flex align-items-center">
-          <i class="fas fa-envelope me-3 text-dark"></i>
-          <span>Email</span>
+          <i class="fas fa-envelope me-3 text-dark"></i><span>Email</span>
         </li>
         <li class="py-2 border-bottom d-flex align-items-center">
-          <i class="fab fa-apple me-3 text-dark"></i>
-          <span>Apple</span>
+          <i class="fab fa-apple me-3 text-dark"></i><span>Apple</span>
         </li>
         <li class="py-2 d-flex align-items-center">
-          <i class="fab fa-google me-3 text-dark"></i>
-          <span>Google</span>
+          <i class="fab fa-google me-3 text-dark"></i><span>Google</span>
         </li>
       </ul>
     </div>
-
   </div>
 </div>
 
-
-<!-- Main Content -->
 <div class="container-fluid">
   <div class="row g-0">
-
-    <!-- Right Panel -->
-   <div class="col-md-7 right-panel order-1 order-md-2">
-      <div class="top-icons d-none d-md-flex">
-        <a href="#" 
-          style="margin-left: 50px;" 
-          class="icon-circle" 
-          data-bs-toggle="offcanvas" 
-          data-bs-target="#offcanvasMenu">
+    <div class="col-md-7 right-panel order-1 order-md-2">
+      <div class="top-icons d-none d-md-flex ms-4 mt-2">
+        <a href="#" class="icon-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
           <i class="fas fa-bars"></i>
         </a>
-        <a href="#" style="margin-left: 30px;" class="icon-circle"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#" style="margin-left: 30px;" class="icon-circle"><i class="fas fa-search"></i></a>
-        <a href="#" style="margin-left: 30px;" class="icon-circle"><i class="fas fa-language"></i></a>
+        <a href="#" class="icon-circle ms-3"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" class="icon-circle ms-3"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon-circle ms-3"><i class="fas fa-language"></i></a>
       </div>
 
-      <!-- Image for large screens -->
       <img src="images/right.jpeg" class="bg-img d-none d-lg-block" alt="Right Panel Image">
-
-      <!-- Image for small/medium screens -->
-      <img src="images/mb.jpeg"  style="height: 60vh;" class="bg-img d-block d-lg-none" alt="Mobile Screen Image">
+      <img src="images/mb.jpeg" class="bg-img d-block d-lg-none" alt="Mobile Screen Image">
 
       <div class="social-icons">
-        <a href="https://wa.me/923112913499" class="whatsapp" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-        </a>
+        <a href="https://wa.me/923112913499" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
 
-
-    <!-- Left Panel -->
     <div class="col-md-5 bg-white p-3 d-flex flex-column order-2 order-md-1 left-panel">
       <div class="d-flex justify-content-between align-items-start mb-3">
         <div class="d-flex align-items-center gap-2">
@@ -136,8 +113,7 @@
           <div><i class="fa fa-motorcycle me-2"></i>Deliver to</div>
           <div><i class="fa fa-clock me-2"></i>Earliest arrival</div>
         </div>
-       <div><strong>Choose location</strong> <a href="#" class="ms-2" style="color: #872727;">Edit</a></div>
-
+        <div><strong>Choose location</strong> <a href="#" class="ms-2" style="color: #872727;">Edit</a></div>
       </div>
 
       <div class="bg-light p-3 rounded mb-3">
@@ -155,142 +131,60 @@
       </div>
 
       <div class="row g-2">
+        <!-- Product Cards -->
         <div class="col-6">
           <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
+            <img src="images/pe1.jpeg" class="card-img-top" alt="Product">
             <div class="card-body p-2">
               <h6 class="card-title mb-0">Product 1</h6>
             </div>
           </div>
         </div>
-          <div class="col-6">
+         <div class="col-6">
           <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
+            <img src="images/pe1.jpeg" class="card-img-top" alt="Product">
             <div class="card-body p-2">
               <h6 class="card-title mb-0">Product 1</h6>
             </div>
           </div>
         </div>
-          <div class="col-6">
+         <div class="col-6">
           <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
+            <img src="images/pe1.jpeg" class="card-img-top" alt="Product">
             <div class="card-body p-2">
               <h6 class="card-title mb-0">Product 1</h6>
             </div>
           </div>
         </div>
-          <div class="col-6">
+         <div class="col-6">
           <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
+            <img src="images/pe1.jpeg" class="card-img-top" alt="Product">
             <div class="card-body p-2">
               <h6 class="card-title mb-0">Product 1</h6>
             </div>
           </div>
         </div>
-          <div class="col-6">
+         <div class="col-6">
           <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
+            <img src="images/pe1.jpeg" class="card-img-top" alt="Product">
             <div class="card-body p-2">
               <h6 class="card-title mb-0">Product 1</h6>
             </div>
           </div>
         </div>
-          <div class="col-6">
+         <div class="col-6">
           <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
+            <img src="images/pe1.jpeg" class="card-img-top" alt="Product">
             <div class="card-body p-2">
               <h6 class="card-title mb-0">Product 1</h6>
             </div>
           </div>
         </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-          <div class="col-6">
-          <div class="card text-center">
-            <img src="images/pe1.jpeg" class="card-img-top" alt="Product 1">
-            <div class="card-body p-2">
-              <h6 class="card-title mb-0">Product 1</h6>
-            </div>
-          </div>
-        </div>
-       
+        <!-- End Product Block -->
       </div>
 
-      <div class="footer-bar mt-3">
-        Select your location
-      </div>
+      <div class="footer-bar mt-3">Select your location</div>
     </div>
-
   </div>
 </div>
 

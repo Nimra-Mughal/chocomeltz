@@ -1,124 +1,125 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden; /* Fix horizontal scroll */
+}
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-    }
+.right-panel {
+  background-color: #872727;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
-    .right-panel {
-      background-color: #872727;
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-    }
+.right-panel img.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .right-panel img.bg-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.social-icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .social-icons {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-    .social-icons a {
-      width: 40px;
-      height: 40px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      border-radius: 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+.whatsapp {
+  background-color: #25D366;
+}
 
-    .whatsapp {
-      background-color: #25D366;
-    }
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
 
-    .instagram {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    }
+.footer-bar {
+  background: #6c3a2d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
 
-    .footer-bar {
-      background: #6c3a2d;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      border-radius: 5px;
-    }
+.left-panel {
+  height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
-    .left-panel {
-      height: 100vh;
-      overflow-y: scroll;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE 10+ */
-    }
+.left-panel::-webkit-scrollbar {
+  display: none;
+}
 
-    .left-panel::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
-    }
+.left-panel .footer-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
 
-    .left-panel .footer-bar {
-      position: sticky;
-      bottom: 0;
-      z-index: 10;
-    }
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #6c3a2d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
-    .icon-circle {
-      width: 40px;
-      height: 40px;
-      background-color: white;
-      color: #6c3a2d;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
+.icon-circle:hover {
+  background-color: #f0f0f0;
+  color: #872727;
+}
 
-    .icon-circle:hover {
-      background-color: #f0f0f0;
-      color: #872727;
-    }
+.top-icons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
 
-    .top-icons {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 10;
-      display: flex;
-      gap: 10px;
-    }
-
-    .mobile-icon {
+.mobile-icon {
   color: #872727;
   font-size: 1.2rem;
 }
 
+/* Sticky navbar for mobile */
+@media (max-width: 767px) {
+  .mobile-navbar-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
 
-    @media (max-width: 767px) {
-      .mobile-navbar-fixed {
-        position: sticky;
-        top: 0;
-        z-index: 1020;
-      }
-    }
-    @media (max-width: 991.98px) {
+/* Shorter right-panel height for small devices */
+@media (max-width: 991.98px) {
   .right-panel {
     height: 60vh !important;
   }
 }
-
